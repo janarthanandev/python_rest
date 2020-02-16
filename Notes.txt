@@ -3,3 +3,13 @@ django-admin startproject profiles_project .
 
 To create django app, we are going to use manage.py as we created from django profiles_project
 python manage.py startapp profiles_api
+
+To enable newly creted profile app in django we need to add that and 
+rest_framework app in profile_project/settings.py under installed apps
+'rest_framework',
+'rest_framework.authtoken',
+'profiles_api',
+
+To start django go to terminal 
+python manage.py runserver 0.0.0.0:8000
+#here 8080 is port number which we going to run in browser
