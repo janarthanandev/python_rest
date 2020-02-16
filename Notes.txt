@@ -13,3 +13,24 @@ rest_framework app in profile_project/settings.py under installed apps
 To start django go to terminal 
 python manage.py runserver 0.0.0.0:8000
 #here 8080 is port number which we going to run in browser
+
+In models.py
+ We going to inherit AbstractBaseUser,PermissionsMixin of auth.models to create custom user 
+ and BaseUserManager to create Profile Manager 
+
+In settings.py 
+we going to tell django to look on UserProfile
+ for authentication and user registration of our project
+
+AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+Django manage database with the help of Migration file that stores all
+of the steps required to modify the database match our django models.
+so if we changed the models or updated the model we need to create a
+migration file.
+
+To create a migration file:
+python manage.py makemigrations profiles_api
+
+To run a migration in our project:
+python manage.py makemigrations profiles_api
